@@ -5,16 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Comics List</title>
+    <title>Id Selection</title>
 </head>
 
 <body>
-    <h1>elenco fumetti</h1>
-    <ul>
-        @foreach ($comics as $comic)
-            <li><a href="{{ route('comics.show', $comic->id) }}">{{ $comic->title }}</a></li>
-        @endforeach
-    </ul>
+    <h1>{{ $comics->title }}</h1>
+    <p>{{ $comics->description }}</p>
+    <!-- Bottone per navigare tra le pagine-->
+    <a href="{{ route('comics.index') }}">Torna a Index</a>
 </body>
 
 </html>
