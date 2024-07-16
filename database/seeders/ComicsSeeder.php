@@ -6,6 +6,7 @@ use App\Models\Comic;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 
 class ComicsSeeder extends Seeder
 {
@@ -28,8 +29,8 @@ class ComicsSeeder extends Seeder
             $comic->series = $comics_db['series'];
             $comic->sale_date = $comics_db['sale_date'];
             $comic->type = $comics_db['type'];
-            $comic->artists = json_encode($comics_db['artists']);
-            $comic->writers = json_encode($comics_db['writers']);
+            $comic->artists = $comics_db['artists'];
+            $comic->writers = $comics_db['writers'];
             $comic->save();
         }
     }
