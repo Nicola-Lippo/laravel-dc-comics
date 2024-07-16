@@ -11,8 +11,13 @@
 
 <body>
     <div class="container">
-        <h1 class="text-center">Template laravello</h1>
-        <img src="{{ Vite::asset('resources/img/foto.png') }}" alt="foto template">
+        <section>
+            <h1 class="text-center m-5">Welcome</h1>
+            <div class="d-flex justify-content-center m-5">
+                <button class="btn btn-secondary"><a href="{{ route('comics.index') }}">Go to comics list</a></button>
+            </div>
+
+        </section>
     </div>
 </body>
 
