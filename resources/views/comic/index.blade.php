@@ -22,8 +22,15 @@
                                 <a href="{{ route('comics.show', $comic->id) }}">{{ $comic->title }}</a>
                             </h5>
                             <p class="card-text">{{ $comic->series }}</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                            <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-secondary">Edit</a>
+                            <section class="d-flex justify-content-center">
+                                <a href="#" class="btn btn-primary">Go</a>
+                                <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-secondary">Edit</a>
+                                <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger">Delete</button>
+                                </form>
+                            </section>
                         </div>
                     </div>
 
@@ -32,6 +39,7 @@
         </div>
         <hr>
         <button class="btn btn-secondary m-4"><a href="{{ route('comics.create') }}">Create a new comics</a></button>
+
     </div>
 
 </body>
