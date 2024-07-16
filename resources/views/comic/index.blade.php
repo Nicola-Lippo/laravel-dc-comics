@@ -23,6 +23,7 @@
                             </h5>
                             <p class="card-text">{{ $comic->series }}</p>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-secondary">Edit</a>
                         </div>
                     </div>
 
